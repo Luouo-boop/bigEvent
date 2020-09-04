@@ -19,6 +19,7 @@ $(function () {
     })
 })
 
+//获取用户信息
 function getUserInfo() {
     $.ajax({
         method: 'GET',
@@ -28,7 +29,7 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem('token') || ''
         // },
         success(res) {
-            console.log(res);
+            // console.log(res);
             if (res.status !== 0) {
                 return layer.msg('获取用户信息失败')
             }
